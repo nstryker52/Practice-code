@@ -1,5 +1,5 @@
 float sz=30;
-float x=width/2;
+float x=300;
 float y=sz*2;
 float velY=2;
 float velX=3;
@@ -19,8 +19,17 @@ void draw() {
 
   ellipse(x, y, sz, sz);
   if(y+sz/2>height){
-   y=height-sz/2;
-   velY*=-1;
+  y=height-sz/2;
+   velY*=-.9;
+   velX *= .9;
+  } 
+  if(x+sz/2 > width){
+
+  velX *= -1;
+  }
+  if(x-sz/2 < 0){
+
+   velX *= -1; 
   }
 }
 
