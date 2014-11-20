@@ -4,6 +4,7 @@ PVector acc;
 int sz = 31;
 
 void setup() {
+  background(0);
   size(800, 800);
   colorMode(HSB, 360, 100, 100, 100);
   noStroke();
@@ -13,7 +14,7 @@ void setup() {
 }
 
 void draw() {
-  fill(frameCount%360, 100, 100, 100);
+  //fill(frameCount%360, 100, 100, 100);
   acc.set(random(-.1, .1), random(-.1, .1));
   vel.add(acc);
   vel.limit(5);
