@@ -1,20 +1,26 @@
 float sz = 30;
-PVector loc;
-PVector mouse;
-PVector vel;
-PVector acc;
+float sz2 = 45;
+PVector loc, vel, acc;
+PVector loc2, vel2, acc2;
+
 
 void setup() {
   size(700, 700);
   loc = new PVector(width/2, height/2);
-  mouse = new PVector();
   vel = new PVector(1, 1);
   acc = new PVector(0, 0);
+  loc2 = new PVector(200,90);
+  vel2 = new PVector(2,2);
+  acc2 = new PVector(0,0);
 }
 
 void draw() {
   vel.add(acc);
   loc.add(vel);
+  
+  vel2.add(acc2);
+  loc2.add(vel2);
+  
   background(125);
   ellipse(loc.x, loc.y, sz, sz);
   mouse.set(mouseX, mouseY);
