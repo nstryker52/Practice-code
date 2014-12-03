@@ -1,7 +1,7 @@
 Gball b;
 
 void setup() {
-  frameRate(600);
+  frameRate(500);
   size(800, 700);
   b = new Gball();
 }
