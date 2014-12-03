@@ -1,17 +1,20 @@
-Gball b;
+Gball[] g = new Gball[100];
 
 void setup() {
   frameRate(500);
-  size(800, 700);
-  b = new Gball();
+  size(900, 900);
+  for (int i = 0; i < g.length; i++) {
+    g[i] = new Gball();
+  }
 }
 void draw() {
   background(125);
-  b.display();
-  b.move();
-  b.bounce();
+  for (int i = 0; i < g.length; i++) {
+    g[i].display();
+    g[i].move();
+    g[i].bounce();
+  }
 }
-
 class Gball {
   float sz;
   PVector loc, vel;
