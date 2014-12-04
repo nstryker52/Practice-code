@@ -1,6 +1,7 @@
-Gball[] g = new Gball[100];
+Gball[] g = new Gball[1000];
 
 void setup() {
+  noStroke();
   frameRate(500);
   size(900, 900);
   for (int i = 0; i < g.length; i++) {
