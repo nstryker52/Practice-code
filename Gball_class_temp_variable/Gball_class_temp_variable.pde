@@ -5,9 +5,10 @@ Gball b2;
 void setup() {
   frameRate(600);
   size(800, 700);
-  b = new Gball(10);
-  b1 = new Gball(30);
-  b2 = new Gball(50);
+  b = new Gball(random(100));
+  b1 = new Gball(random(100));
+  b2 = new Gball(random(100));
+  colorMode(HSB, 360,100,100,100);
 }
 void draw() {
   background(125);
@@ -25,13 +26,19 @@ void draw() {
 class Gball {
   float sz;
   PVector loc, vel;
+  float z,x,c,v;
 
   Gball(float tempsz) {
     sz = tempsz;
     loc = new PVector(width/2, height/2);
     vel = PVector.random2D();
+    z=random(360);
+    x=random(100);
+    c=random(100);
+    v=random(100);
   }
   void display() {
+    fill(z,x,c,v);
     ellipse(loc.x, loc.y, sz, sz);
   }  
   void move() {
