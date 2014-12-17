@@ -18,7 +18,7 @@ class particle {
     fill(0, 99, 99, 70);
     ellipse(loc.x, loc.y, sz, sz);
     alpha--;
-    sz--;
+    //sz--;
   }
   //movement
   void move() {

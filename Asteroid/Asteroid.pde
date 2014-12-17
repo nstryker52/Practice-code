@@ -1,5 +1,5 @@
 ArrayList<particle> asteroid = new ArrayList<particle>();
-int max= 300;
+int max= 100;
 
 void setup() {
   size(700, 600);
@@ -15,7 +15,7 @@ void draw() {
     a.bounce();
 //    for (int j = asteroid.size () -1; j>0; j--) {
 //      if (i!=j) {
-//        a(i).collide(a(j));
+//        a.get(i).collide(a.get(j));
 //      }
 //    }
   }
